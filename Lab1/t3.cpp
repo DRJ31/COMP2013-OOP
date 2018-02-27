@@ -2,12 +2,12 @@
 int main(){
     int start, end;
     printf("Enter the start integer: ");
-    scanf("%d", &start);
+    scanf("%d", &start);//Scan the first integer
     printf("Enter the end integer: ");
-    scanf("%d", &end);
+    scanf("%d", &end);//Scan the second integer
     for (int i = start; i <= end; i++){
-        printf("%d ", i);
+        printf("%d ", i);//Print out numbers in sequence
     }
-    puts("");
+    puts("");//Line break
     return 0;
 }
