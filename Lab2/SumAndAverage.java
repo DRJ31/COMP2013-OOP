@@ -9,22 +9,25 @@ public class SumAndAverage {
         //Divided by 50 because there are 50 odd numbers in 1-100
     }
     private static void dividedBySeven(){
-        int sum = 0, amount = 0;
+        //Number is the number which will be added if it can be divised by 7
+        int sum = 0, amount = 0, number = 1;
         //Amount is the amount of numbers which can be divided by 7
-        for (int i = 1; i <= 100; i++){
-            if (i % 7 == 0){
-                sum += i;
+        while (number <= 100){
+            if (number % 7 == 0){
+                sum += number;
                 amount++;//Count number which can be divided by 7
             }
+            number++;
         }
         System.out.println("The sum is " + sum);
         System.out.println("The average is " + (sum * 1.0 / amount));
     }
     private static void squareSum(){
-        int sum = 0;
-        for (int i = 1; i <= 100; i++){
-            sum += i * i;
-        }
+        int sum = 0, num = 1;
+        do{
+            sum += num * num;
+            num++;
+        } while(num <= 100);
         System.out.println("The result is: " + sum);
     }
 

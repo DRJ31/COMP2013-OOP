@@ -1,3 +1,4 @@
 #Files
 a.out
 *.class
+.DS_Store
