@@ -1,28 +1,34 @@
 import java.util.Scanner;
 
 public class TestPalindrome {
-    private static String toCharArr(String str){//Put all the English letters into a new String
-        StringBuilder temp = new StringBuilder();
-        int len = str.length();
-        for (int i = 0; i < len; i++){
-            if (str.charAt(i) >= 'a' && str.charAt(i) <= 'z'){//Check if the character is an English letter
-                temp.append(str.charAt(i));
-            }
-        }
-        return temp.toString();//Convert StringBuilder to String
-    }
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter a sentence: ");
-        String str = input.nextLine();
-        String newStr = toCharArr(str.toLowerCase());//Convert sentence into String with only English letters
-        int len = newStr.length();
-        for (int i = 0; i < len; i++){//Check if the String is a palindrome
-            if (newStr.charAt(i) != newStr.charAt(len - 1 - i)){
-                System.out.printf("\"%s\" is not a palindrome.\n", str);
-                return;
-            }
-        }
-        System.out.printf("\"%s\" is a palindrome.\n", str);
+    public static String toOnlyLetterString(String s) {//Convert a sentence into string with only English letters
+		StringBuilder str = new StringBuilder();//A StringBuilder to save the new string
+		int len = s.length();
+		for (int i = 0; i < len; i++) {
+			if (s.charAt(i) >= 'a' && s.charAt(i) <= 'z') {
+				str.append(s.charAt(i));//Add English letter into StringBuilder
+			}
+		}
+		return str.toString();
+	}
+	public static void main(String[] args) {
+		System.out.print("Enter a String: ");
+		Scanner in = new Scanner(System.in);
+		String inStr = in.nextLine(); // read string
+		String lowStr = toOnlyLetterString(inStr.toLowerCase()); // convert to lowercase
+		int fIdx = 0, bIdx = lowStr.length() - 1; // forward & backward indexes
+		char fChar, bChar; // forward & backward characters
+		while(fIdx < bIdx) {
+			fChar = lowStr.charAt(fIdx);
+			bChar = lowStr.charAt(bIdx);
+			if(fChar != bChar) {
+				System.out.println("\"" + inStr + "\" is not a palindrome");
+				return;
+			} else { // match, change index
+				fIdx++;
+				bIdx--;
+			}
+		}
+		System.out.println("\"" + inStr + "\" is a palindrome");
     }
 }
