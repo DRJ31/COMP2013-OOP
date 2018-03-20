@@ -51,7 +51,27 @@ class Student{
     }
     companion object {
         fun TestStudent(){
-
+            val stu1 = Student(3054, "Jingyu", 'C')
+            val stu2 = Student(-1, "Andrew")
+            println(stu1.getID() == 3054)
+            println(stu1.getName() == "Jingyu")
+            println(stu2.getID() == 0)
+            println(stu2.getName() == "Andrew")
+            stu1.setName("Bill")
+            stu2.setName("Joseph")
+            println(stu1.getName() == "Bill")
+            println(stu2.getName() == "Joseph")
+            stu1.setGrade('B')
+            stu2.setGrade('C')
+            println(stu1.getGrade() == 'B')
+            println(stu2.getGrade() == 'C')
+            stu2.goToSleep()
+            println(stu1.isSleeping() == false)
+            println(stu2.isSleeping() == true)
+            println(stu2.getGrade() == 'D')
+            stu2.wakeUp()
+            println(stu2.isSleeping() == false)
+            println(stu2.getGrade() == 'D')
         }
     }
 }
