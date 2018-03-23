@@ -2,6 +2,7 @@
 a.out
 *.class
 .DS_Store
+*.zip
 
 #Folders
 .metadata/
