@@ -31,15 +31,20 @@ public class Student {
         return grade;
     }
     public void setGrade(char grade){//Reset the grade of student
-        this.grade = grade;
+    	if ((grade >= 'A' && grade <= 'D') || grade == 'F')//Check if the grade is valid
+			this.grade = grade;
+		else
+			System.out.println("Invalid grade, now grade is still A");
     }
     public boolean isSleeping(){//Check if the student is sleeping
         return sleeping;
     }
     public void goToSleep(){//Set sleeping = true and decrease grade of this student
         sleeping = true;
-        if (grade != 'F')
+        if (grade < 'D')
             grade++;
+        else
+        		grade = 'F';
     }
     public void wakeUp(){//Set sleeping = false
         sleeping = false;

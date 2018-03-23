@@ -30,7 +30,10 @@ public class Student {
         return grade;
     }
     public void setGrade(char grade){//Reset the grade for student
-        this.grade = grade;
+    	if ((grade >= 'A' && grade <= 'D') || grade == 'F')//Check if the grade is valid
+			this.grade = grade;
+		else
+			System.out.println("Invalid grade, now grade is still A");
     }
     public static void TestStudent() {
     	Student stu1 = new Student(3054, "Jingyu", 'C');//Reset student1 with grade
