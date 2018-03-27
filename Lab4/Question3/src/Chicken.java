@@ -28,13 +28,15 @@ public class Chicken {
 
 	public static void testChicken() {
 		Chicken c = new Chicken(2.3);
-
+		//Testing get information function
 		System.out.println(c.getWeight() == 2.3);
 		System.out.println(c.isSleeping() == true);
+		//Testing wakeUp function
 		c.wakeUp();
 		System.out.println(c.isSleeping() == false);
 		c.wakeUp();
 		System.out.println(c.isSleeping() == false);
+		//Testing fallAsleep function
 		c.fallAsleep();
 		System.out.println(c.isSleeping() == true);
 		c.fallAsleep();

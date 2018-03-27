@@ -28,13 +28,15 @@ public class Student {
 
 	public static void testStudent() {
 		Student s = new Student(1234567890);
-
+		//Testing get information functions
 		System.out.println(s.getID() == 1234567890);
 		System.out.println(s.isSleeping() == false);
+		//Testing fall asleep function
 		s.fallAsleep();
 		System.out.println(s.isSleeping() == true);
 		s.fallAsleep();
 		System.out.println(s.isSleeping() == true);
+		//Testing wakeUp function
 		s.wakeUp();
 		System.out.println(s.isSleeping() == false);
 		s.wakeUp();

@@ -28,8 +28,10 @@ public class Student {
         Bag blackBag = new Bag("black", pen);
         Bag greenBag = new Bag("green", pen);
         Student stu = new Student("Bill", blackBag);
+        //Testing get information functions
         System.out.println(stu.getName().equals("Bill"));
         System.out.println(stu.getBag().equals(blackBag));
+        //Testing setBag function
         stu.setBag(greenBag);
         System.out.println(stu.getBag().equals(greenBag));
         System.out.println(stu.listPossessions());

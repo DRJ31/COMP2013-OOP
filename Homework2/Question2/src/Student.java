@@ -39,11 +39,14 @@ public class Student {
         Bag blackBag = new Bag("black", pen);
         Bag greenBag = new Bag("green", pen);
         Student stu = new Student("Bill", blackBag, cat);
+        //Test getting information from student
         System.out.println(stu.getName().equals("Bill"));
         System.out.println(stu.getBag().equals(blackBag));
+        //Testing setBag function
         stu.setBag(greenBag);
         System.out.println(stu.getBag().equals(greenBag));
         System.out.println(stu.listPossessions());
+        //Testing feedCat function
         stu.feedCat();
         System.out.println(stu.listPossessions());
         stu.feedCat();
