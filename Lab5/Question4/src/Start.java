@@ -1,7 +1,7 @@
 public class Start {
     public static void main(String[] args) {
-        Bird.testBird();
-        Bird bird = new Bird("Lollipop", 1.0, 1060);
+        Animal.testAnimal();
+        Animal bird = new Animal("Lollipop", 1.0);
         Student.testStudent();
         Student stu = new Student("Clear", bird);
         System.out.println(stu.getPet().getName() == "Lollipop");
