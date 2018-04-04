@@ -21,6 +21,7 @@ public class Student {
     public static void testStudent() {
         Animal neko = new Animal("Neko", 2.33);
         Student stu = new Student("Max", neko);
+        //Test student and pet's information
         System.out.println(stu.getName() == "Max");
         System.out.println(stu.getPet().getName() == "Neko");
         System.out.println(stu.getPet().getWeight() == 2.33);

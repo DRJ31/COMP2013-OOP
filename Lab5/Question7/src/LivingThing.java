@@ -11,6 +11,7 @@ public class LivingThing {
 
     public static void testLivingThing() {
         LivingThing person = new LivingThing("Saber");
+        //Test the name of LivingThing
         System.out.println(person.getName() == "Saber");
     }
 }

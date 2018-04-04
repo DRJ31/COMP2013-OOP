@@ -14,7 +14,7 @@ public class Dog extends Animal {
     }
 
     public void feed() {
-        super.setWeight(2.0);
+        super.setWeight(getWeight() + 2.0);
     }
 
     public static void testDog() {

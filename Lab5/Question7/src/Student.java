@@ -19,8 +19,10 @@ public class Student extends LivingThing{
     public static void testStudent() {
         Bird bird = new Bird("Gugu", 1.0, 1070);
         Student stu = new Student("Gigabyte", bird);
+        //Test the pet of student
         System.out.println(stu.getPet().getWeight() == 1.0);
         System.out.println(stu.getPet().getName() == "Gugu");
+        //Test 
         System.out.println(stu.getName() == "Gigabyte");
     }
 }

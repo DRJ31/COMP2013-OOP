@@ -1,25 +1,23 @@
-public class Cat {
-    private String name;
-    private double weight;
+public class Cat extends Animal{
 
     public Cat(String name, double weight) {
-        this.name = name;
-        this.weight = weight;
-    }
+		super(name, weight);
+	}
 
-    public String getName() {
-        return name;
-    }
+    @Override
+	public String getName() {
+		return super.getName();
+	}
 
-    public double getWeight() {
-        return weight;
-    }
+	@Override
+	public double getWeight() {
+		return super.getWeight();
+	}
 
-    public void feed() {
-        weight++;
-    }
-
-    public static void testCat() {
+	public void feed() {
+		super.setWeight(getWeight() + 1.0);
+	}
+	public static void testCat() {
         Cat c = new Cat("Meow", 2.0);
         System.out.println(c.getName() == "Meow");
         System.out.println(c.getWeight() == 2.0);

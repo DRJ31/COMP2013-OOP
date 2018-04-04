@@ -13,6 +13,9 @@ public class Bird extends Animal{
 
     public static void testBird() {
         Bird bird = new Bird("Nougat", 1.0, 1080);
+        //Test attributes of bird
         System.out.println(bird.getAltitude() == 1080);
+        System.out.println(bird.getName() == "Nougat");
+        System.out.println(bird.getWeight() == 1.0);
     }
 }
